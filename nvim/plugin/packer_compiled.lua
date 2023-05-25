@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/tecu/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/tecu/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/tecu/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -194,6 +199,11 @@ _G.packer_plugins = {
     path = "/home/tecu/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/tecu/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
     path = "/home/tecu/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
@@ -224,6 +234,11 @@ _G.packer_plugins = {
     path = "/home/tecu/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["prettier.nvim"] = {
+    loaded = true,
+    path = "/home/tecu/.local/share/nvim/site/pack/packer/start/prettier.nvim",
+    url = "https://github.com/MunifTanjim/prettier.nvim"
+  },
   ["project.nvim"] = {
     loaded = true,
     path = "/home/tecu/.local/share/nvim/site/pack/packer/start/project.nvim",
@@ -249,10 +264,10 @@ _G.packer_plugins = {
     path = "/home/tecu/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/ThePrimeagen/vim-be-good"
   },
-  ["vim-illuminate"] = {
+  ["vim-tmux-navigator"] = {
     loaded = true,
-    path = "/home/tecu/.local/share/nvim/site/pack/packer/start/vim-illuminate",
-    url = "https://github.com/RRethy/vim-illuminate"
+    path = "/home/tecu/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   },
   ["vim-vsnip"] = {
     loaded = true,

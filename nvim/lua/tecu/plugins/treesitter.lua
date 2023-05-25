@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = "all", -- one of "all" or a list of languagesnstall = false, -- install languages synchronously (only applied to `ensure_installed`)
+  ensure_installed = {"c", "cpp", "css", "bash", "dockerfile", "git_config", "git_rebase", "dot", "gitattributes", "gitcommit", "gitignore", "html", "javascript", "vim", "scss", "jsdoc", "json", "lua", "markdown", "markdown_inline", "prisma", "python", "ruby", "rust", "sql", "typescript", "yaml"}, -- one of "all" or a list of languagesnstall = false, -- install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
   ignore_install = { "" }, -- List of parsers to ignore installing
   autopairs = {
@@ -13,7 +13,7 @@ configs.setup {
   highlight = {
     enable = true, -- false will disable the whole extension
     disable = { "" }, -- list of language that will be disabled
-    additional_vim_regex_highlighting = true,
+    additional_vim_regex_highlighting = false,
   },
   indent = { enable = true, disable = { "yaml" } },
    context_commentstring = {

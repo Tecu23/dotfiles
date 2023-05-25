@@ -52,6 +52,7 @@ return packer.startup(function(use)
   -- Colorschemes
   use 'LunarVim/Colorschemes'
   use({ 'rose-pine/neovim', as = 'rose-pine'})
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Completions Plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -72,7 +73,7 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim" -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim"
 	use "jose-elias-alvarez/null-ls.nvim"   -- for formatters and linters
-  use "RRethy/vim-illuminate"
+  use "MunifTanjim/prettier.nvim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -116,8 +117,14 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
+  -- Auto Close Tags
+  use "windwp/nvim-ts-autotag"
+
   -- Git
 	use "lewis6991/gitsigns.nvim"
+
+  -- TMUX
+  use "christoomey/vim-tmux-navigator"
 
   -- To be Removed Later Plugins
   use 'ThePrimeagen/vim-be-good'

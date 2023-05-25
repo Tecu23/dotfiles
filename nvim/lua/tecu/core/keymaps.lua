@@ -34,6 +34,10 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>", opts)
+keymap("n", "<C-j>", "<cmd> TmuxNavigateRight<CR>", opts)
+keymap("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>", opts)
+keymap("n", "<C-l>", "<cmd> TmuxNavigateDown<CR>", opts)
 
 -- Window Management
 keymap("n", "<leader>sv", "<C-w>v", opts) -- split window vertically
