@@ -1,25 +1,21 @@
-require "tecu.plugins"
+for _, source in ipairs {
+  "astronvim.bootstrap",
+  "astronvim.options",
+  "astronvim.lazy",
+  "astronvim.autocmds",
+  "astronvim.mappings",
+} do
+  local status_ok, fault = pcall(require, source)
+  if not status_ok then vim.api.nvim_err_writeln("Failed to load " .. source .. "\n\n" .. fault) end
+end
 
-require "tecu.core.options"
-require "tecu.core.keymaps"
-require "tecu.core.colorscheme"
+if astronvim.default_colorscheme then
+  if not pcall(vim.cmd.colorscheme, astronvim.default_colorscheme) then
+    require("astronvim.utils").notify(
+      "Error setting up colorscheme: " .. astronvim.default_colorscheme,
+      vim.log.levels.ERROR
+    )
+  end
+end
 
-require "tecu.plugins.cmp"
-require "tecu.plugins.lsp"
-require "tecu.plugins.telescope"
-require "tecu.plugins.treesitter"
-require "tecu.plugins.autopairs"
-require "tecu.plugins.comment"
-require "tecu.plugins.gitsigns"
-require "tecu.plugins.nvim-tree"
-require "tecu.plugins.bufferline"
-require "tecu.plugins.lualine"
-require "tecu.plugins.project"
-require "tecu.plugins.indentline"
-require "tecu.plugins.impatient"
-require "tecu.plugins.alpha"
-require "tecu.plugins.autocommands"
-require "tecu.plugins.whichkey"
-require "tecu.plugins.nvterm"
-require "tecu.plugins.prettier"
-require "tecu.plugins.autotag"
+require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, false), true)
