@@ -1,4 +1,8 @@
-# Tecu23
+## TODO:
+
+1. Add NVIM Config
+2. Add tmux config
+3. Add everything else
 
 ## My dotfiles & config files
 
