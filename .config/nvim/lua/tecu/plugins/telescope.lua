@@ -23,6 +23,10 @@ function M.config()
 
   require("telescope").setup {
     defaults = {
+      file_ignore_pattern = {
+        "./node_modules/*", "node_modules", "^node_modules/*", "node_modules/*",
+        ".git/", ".cache", "%.o", "%.a", "%.out", "%.class", "%.pdf", "%.mkv", "%.mp4", "%.zip" 
+      },
       prompt_prefix = icons.ui.Telescope .. " ",
       selection_caret = icons.ui.Forward .. " ",
       entry_prefix = "   ",
@@ -41,7 +45,6 @@ function M.config()
         "--hidden",
         "--glob=!.git/",
       },
-
       mappings = {
         i = {
           ["<C-n>"] = actions.cycle_history_next,
