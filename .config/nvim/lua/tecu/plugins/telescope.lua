@@ -68,6 +68,7 @@ function M.config()
       },
 
       find_files = {
+        hidden = true,
         theme = "dropdown",
         previewer = false,
       },
