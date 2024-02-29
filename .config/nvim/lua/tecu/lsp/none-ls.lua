@@ -7,6 +7,7 @@ local M = {
 
 function M.config()
   local null_ls = require "null-ls"
+  local autogroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
   local formatting = null_ls.builtins.formatting
   local diagnostics = null_ls.builtins.diagnostics
@@ -18,12 +19,31 @@ function M.config()
       formatting.stylua,
       formatting.prettier,
       formatting.black,
+      formatting.gofumpt,
+      formatting.goimports_reviser,
+      formatting.golines,
 
       diagnostics.buf,
       diagnostics.revive,
 
       completions.spell,
     },
+    on_attach = function(client, bufnr)
+      if client.supports_method("textDocument/formatting") then
+        vim.api.nvim_clear_autocmds({
+          group = autogroup,
+          buffer = bufnr,
+        })
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          group = autogroup,
+          buffer = bufnr,
+          callback = function ()
+            vim.lsp.buf.format({ bufnr = bufnr })
+            
+          end
+        })
+      end
+    end,
   }
 end
 

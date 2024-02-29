@@ -26,6 +26,7 @@ spec "tecu.plugins.autopairs"
 spec "tecu.plugins.neotest"
 spec "tecu.plugins.alpha"
 spec "tecu.plugins.indentline"
+spec "tecu.plugins.gopher"
 
 -- LSP
 spec "tecu.lsp.mason"

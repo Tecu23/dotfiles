@@ -56,6 +56,7 @@ function M.config()
   local icons = require "tecu.plugins.icons"
 
   local servers = {
+    "gopls",
     "lua_ls",
     "cssls",
     "html",

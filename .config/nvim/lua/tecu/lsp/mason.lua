@@ -13,6 +13,7 @@ function M.config()
     "tsserver",
     "pyright",
     "bashls",
+    "gopls",
     "jsonls",
     "dockerls",
     "eslint",
