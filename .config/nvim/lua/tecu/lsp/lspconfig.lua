@@ -56,20 +56,19 @@ function M.config()
   local icons = require "tecu.plugins.icons"
 
   local servers = {
-    "gopls",
-    "lua_ls",
-    "cssls",
-    "html",
-    "tsserver",
-    "eslint",
-    "pyright",
     "bashls",
-    "jsonls",
-    "yamlls",
+    "biome",
+    "cssls",
     "dockerls",
     "gopls",
+    "html",
+    "jsonls",
+    "lua_ls",
+    "pyright",
     "sqls",
-    "tailwindcss"
+    "tailwindcss",
+    "tsserver",
+    "yamlls",
   }
 
   local default_diagnostic_config = {
