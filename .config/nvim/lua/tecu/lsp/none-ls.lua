@@ -16,17 +16,18 @@ function M.config()
   null_ls.setup {
     debug = false,
     sources = {
-      formatting.stylua,
-      formatting.prettier,
-      formatting.black,
-      formatting.gofumpt,
-      formatting.goimports_reviser,
-      formatting.golines,
+        formatting.stylua,
+        formatting.prettier,
+        formatting.black,
+        formatting.gofumpt,
+        formatting.goimports_reviser,
+        formatting.golines,
+        formatting.biome,
 
-      diagnostics.buf,
-      diagnostics.revive,
+        diagnostics.buf,
+        diagnostics.revive,
 
-      completions.spell,
+        completions.spell,
     },
     on_attach = function(client, bufnr)
       if client.supports_method("textDocument/formatting") then
