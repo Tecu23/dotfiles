@@ -24,10 +24,13 @@ function M.config()
 			formatting.golines,
 			formatting.biome,
 			formatting.remark,
+			formatting.mdformat,
+			formatting.sqlfluff.with({ extra_args = { "--dialect", "postgres" } }),
 
 			diagnostics.buf,
 			diagnostics.revive,
 			diagnostics.markdownlint,
+			diagnostics.sqlfluff.with({ extra_args = { "--dialect", "postgres" } }),
 
 			completions.spell,
 		},
